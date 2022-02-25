@@ -1,3 +1,4 @@
+'''
 # N과 K 입력받기
 n, k = map(int, input().split())
 coins = []  # 입력 받을 코인 저장할 리스트 생성
@@ -18,3 +19,19 @@ for coin in coins[::-1]:  # 따라서 뒤에서 부터 출력하여 sort()역할
         k %= int(coin)  # 주어진 값은 코인의 값만큼 나눈 후의 
 
 print(result)
+'''
+n, k = map(int, input().split())
+coins = []
+for i in range(n):
+    coins.append(int(input()))
+
+coins.sort(reverse=True)
+coin_min_cnt = 0
+for coin in coins:
+    if coin > k:
+        continue
+    else:
+        coin_min_cnt += k // coin
+        k %= coin
+
+print(coin_min_cnt)
