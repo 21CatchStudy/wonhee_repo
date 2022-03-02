@@ -1,6 +1,6 @@
 s = input()
-make_0 = 0
-make_1 = 0
+make_0 = 0  # 1을 0으로 만들기
+make_1 = 0  # 0을 1로 만들기
 
 for i in range(len(s)):
     if s[i] != s[i-1]:
