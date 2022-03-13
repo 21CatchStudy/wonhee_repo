@@ -1,5 +1,4 @@
 # https://www.acmicpc.net/problem/11054
-
 n = int(input())
 a = list(map(int, input().split()))
 reverse_a = a[::-1]

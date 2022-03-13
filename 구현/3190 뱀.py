@@ -14,7 +14,7 @@ for _ in range(L):
     x, c = input().split()
     dir_info.append((int(x), c))
 
-# (동), 서, 남, 북
+# 동(R), 남(D), 서(L), 북(U)
 dx = [0, 1, 0, -1]
 dy = [1, 0, -1, 0]
 
