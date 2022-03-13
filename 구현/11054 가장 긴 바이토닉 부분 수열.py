@@ -1,7 +1,11 @@
 # https://www.acmicpc.net/problem/11054
 
 n = int(input())
+<<<<<<< HEAD
+a = list(map(int,input().split()))
+=======
 a = list(map(int, input().split()))
+>>>>>>> c80e83a16fdc5c1de50aebb2c70d482a3c3dc9aa
 reverse_a = a[::-1]
 
 increase = [1 for i in range(n)]
