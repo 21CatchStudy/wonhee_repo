@@ -54,17 +54,17 @@ for i in range(pair):
 visited = [False] * (computer+1)
 cnt = 0
 
-# def dfs(v):
-#     global cnt
-#     visited[v] = True
-#     for i in graph[v]:
-#         if not visited[i]:
-#             dfs(i)
-#             visited[i] = True
-#             cnt += 1
-#     return cnt
-#
-# print(dfs(1))
+def dfs(v):
+    global cnt
+    visited[v] = True
+    for i in graph[v]:
+        if not visited[i]:
+            dfs(i)
+            visited[i] = True
+            cnt += 1
+    return cnt
+
+print(dfs(1))
 
 def bfs(v):
     global cnt

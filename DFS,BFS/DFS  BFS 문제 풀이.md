@@ -6,7 +6,7 @@
 
 **고려한 점**
 
-- 전체 그래프를 `False`로 표현해두고, 방문했다면 `True`로 변경
+- 전체 그래프를 `False (or 0)`로 표현해두고, 방문했다면 `True (or 1)`로 변경
 
 - dfs / bfs 예제 익숙해지기
 - 참고_ 이코테 5-8, 5-9
@@ -22,10 +22,6 @@ for _ in range(m):
     a, b = map(int, input().split())
     graph[a].append(b)
     graph[b].append(a)
-
-for i in range(len(graph)):
-    graph[i].sort()
-
 
 # dfs
 def dfs(v):
@@ -74,11 +70,14 @@ print(bfs(v))
 
 computer = int(input())
 pair = int(input())
+
 graph = [[] for _ in range(computer+1)]
+
 for i in range(pair):
     a, b = map(int, input().split())
     graph[a].append(b)
     graph[b].append(a)
+
 visited = [False] * (computer+1)
 cnt = 0
 
@@ -259,3 +258,20 @@ print(result-1)  # 처음 시작이 1이므로 -1 해주기
 - bfs()에 매개변수를 넣지 않고 진행되는 형식 이해 하기
 - 출력값이 -1, 0 인 경우 어떻게 구현하는지
 - bfs / dfs 형식 정확하게 이해하고 외우기
+- 진호님 코드 참고 반영 
+
+```python
+result = 0
+is_zero = 0
+for i in range(n):
+    for j in range(m):
+        if tomato[i][j] == 0:
+            is_zero = 1
+        result = max(result, tomato[i][j])
+
+if is_zero == 1:
+    print(-1)
+else:
+    print(result-1)
+```
+
