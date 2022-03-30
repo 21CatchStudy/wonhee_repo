@@ -1,5 +1,13 @@
 # https://www.acmicpc.net/problem/1654
 
+'''
+4 11
+802
+743
+457
+539
+'''
+
 # k, n = map(int, input().split())
 # LAN = sorted([int(input()) for _ in range(k)])
 #
