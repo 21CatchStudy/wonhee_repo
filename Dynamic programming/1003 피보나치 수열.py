@@ -22,6 +22,19 @@ dp[3] = 2
 for i in range(4, 41):
     dp[i] = dp[i-1] + dp[i-2]
 
+t = int(input())
+for _ in range(t):
+    n = int(input())
+    if n == 0:
+        zero, one = 1, 0
+    elif n == 1:
+        zero, one = 0, 1
+    while n > 1:
+        for i in range(n):
+            zero = dp[i]
+            one = dp[i] + dp[i - 1]
+        break
+    print(zero, one)
 
 # n = int(input())
 # if n == 0:
@@ -35,21 +48,6 @@ for i in range(4, 41):
 #     break
 # print(a, b)
 
-
-
-t = int(input())
-for _ in range(t):
-    n = int(input())
-    if n == 0:
-        a, b = 1, 0
-    elif n == 1:
-        a, b = 0, 1
-    while n > 1:
-        for i in range(n):
-            a = dp[i]
-            b = dp[i] + dp[i - 1]
-        break
-    print(a, b)
 '''
 t = int(input())
 for i in range(t):
