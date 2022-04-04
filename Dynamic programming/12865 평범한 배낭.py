@@ -24,14 +24,14 @@ print(dp[-1])
 
 
 # ## https://www.youtube.com/watch?v=uggO0uzGboY
-# for _ in range(n):
-#     w, v = map(int, input().split())  # 물건의 무게 W, 물건의 가치 V
-#     if w > k:
-#         continue
-#     for j in range(k, 0, -1):
-#         if j + w <= k and dp[j] != 0:
-#             dp[j+w] = max(dp[j+w], dp[j] + v)
-#         dp[w] = max(dp[w], v)
-# print(max(dp))
+for _ in range(n):
+    w, v = map(int, input().split())  # 물건의 무게 W, 물건의 가치 V
+    if w > k:
+        continue
+    for j in range(k, 0, -1):
+        if j + w <= k and dp[j] != 0:
+            dp[j+w] = max(dp[j+w], dp[j] + v)
+        dp[w] = max(dp[w], v)
+print(max(dp))
 
 
