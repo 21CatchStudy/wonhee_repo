@@ -16,7 +16,7 @@ def solution(triangle):
         = > triangle[i - 1]
         
         상향식 접근
-        triangle[4][2] -> triangle[3][1] or triangle[3][2]
+        triangle[4][2] -> triangle[3][1] or triangle[3][2] => triangle[x-1][y-1] or triangle[x-1][y]
         triangle[3][2] -> triangle[2][1] or triangle[2][2] => triangle[x-1][y-1] or triangle[x-1][y]
         triangle[2][2] -> triangle[1][1]  => triangle[x-1][y-1]
         triangle[1][0] -> triangle[0][0]  => triangle[x-1][y] 
